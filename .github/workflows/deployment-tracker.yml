@@ -1,20 +1,39 @@
-name: Deployment Tracker
+name: Update Deployment Tracker
 
 on:
-  push:
-     branches:
-           - test-github-action
   repository_dispatch:
-    types: [deployment-tracker]
+    types:
+      - deployment_update
+
+permissions:
+  contents: write
 
 jobs:
-  receive-deployment:
+  update-tracker:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print Deployment Details
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Update Deployment Tracker
+        run: python scripts/update_tracker.py
+
+      - name: Commit Changes
         run: |
-          echo "Service: ${{ github.event.client_payload.service }}"
-          echo "Environment: ${{ github.event.client_payload.environment }}"
-          echo "Version: ${{ github.event.client_payload.version }}"
-          echo "DeploymentId: ${{ github.event.client_payload.deploymentId }}"
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add .
+
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -m "Update deployment tracker"
+            git push
+          fi
