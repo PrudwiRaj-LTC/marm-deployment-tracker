@@ -1,0 +1,17 @@
+{
+	"service": "meta-service",
+	"environment": "pre-prod",
+	"current": {
+		"version": "",
+		"commitId": "",
+		"deploymentId": "",
+		"deployedAt": ""
+	},
+	"previous": {
+		"version": "",
+		"commitId": "",
+		"deploymentId": "",
+		"deployedAt": ""
+	},
+	"compareUrl": ""
+}

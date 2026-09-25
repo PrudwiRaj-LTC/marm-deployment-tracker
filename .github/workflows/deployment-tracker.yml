@@ -1,0 +1,20 @@
+name: Deployment Tracker
+
+on:
+  push:
+     branches:
+           - test-github-action
+  repository_dispatch:
+    types: [deployment-tracker]
+
+jobs:
+  receive-deployment:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Deployment Details
+        run: |
+          echo "Service: ${{ github.event.client_payload.service }}"
+          echo "Environment: ${{ github.event.client_payload.environment }}"
+          echo "Version: ${{ github.event.client_payload.version }}"
+          echo "DeploymentId: ${{ github.event.client_payload.deploymentId }}"

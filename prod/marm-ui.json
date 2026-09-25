@@ -1,0 +1,17 @@
+{
+	"service": "marm-ui",
+	"environment": "prod",
+	"current": {
+		"version": "",
+		"commitId": "",
+		"deploymentId": "",
+		"deployedAt": ""
+	},
+	"previous": {
+		"version": "",
+		"commitId": "",
+		"deploymentId": "",
+		"deployedAt": ""
+	},
+	"compareUrl": ""
+}

@@ -1,0 +1,17 @@
+{
+	"service": "meta-service",
+	"environment": "uat",
+	"current": {
+		"version": "",
+		"commitId": "",
+		"deploymentId": "",
+		"deployedAt": ""
+	},
+	"previous": {
+		"version": "",
+		"commitId": "",
+		"deploymentId": "",
+		"deployedAt": ""
+	},
+	"compareUrl": ""
+}
