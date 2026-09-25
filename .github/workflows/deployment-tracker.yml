@@ -1,16 +1,19 @@
 name: Deployment Tracker
-
+ 
 on:
+  workflow_dispatch:
+ 
   push:
-     branches:
-           - test-github-action
+    branches:
+      - test-github-action
+ 
   repository_dispatch:
     types: [deployment-tracker]
-
+ 
 jobs:
   receive-deployment:
     runs-on: ubuntu-latest
-
+ 
     steps:
       - name: Print Deployment Details
         run: |
