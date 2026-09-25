@@ -2,16 +2,16 @@
   "service": "marm-ui",
   "environment": "int",
   "current": {
+    "version": "1.0.2",
+    "commitId": "abc124",
+    "deploymentId": "test-001",
+    "deployedAt": "2026-09-25T10:00:00Z"
+  },
+  "previous": {
     "version": "1.0.0",
     "commitId": "abc123",
     "deploymentId": "test-001",
     "deployedAt": "2026-09-25T10:00:00Z"
   },
-  "previous": {
-    "version": "",
-    "commitId": "",
-    "deploymentId": "",
-    "deployedAt": ""
-  },
-  "compareUrl": "https://github.com/my-org/marm-ui/compare/...abc123"
+  "compareUrl": "https://github.com/my-org/marm-ui/compare/abc123...abc124"
 }
