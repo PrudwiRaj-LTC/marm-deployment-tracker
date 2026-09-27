@@ -2,11 +2,16 @@
   "service": "dmn01-rskcda-ss123-ui",
   "environment": "int",
   "current": {
+    "version": "release_v1.355.0",
+    "commitId": "75120ea91422d225eccc4d34ad36434c1164a1aa",
+    "deploymentId": "k6byacUAShGHJD9Vjly4hw",
+    "deployedAt": "2026-09-27T14:52:03Z"
+  },
+  "previous": {
     "version": "release_v1.356.0",
     "commitId": "e09bf1426ecc58c15493f788561614aa3678c33e",
     "deploymentId": "SUsjNJP6TFK2TY1c8Sk6Kg",
     "deployedAt": "2026-09-27T14:46:21Z"
   },
-  "previous": null,
-  "compareUrl": ""
+  "compareUrl": "https://github.com/lbg-gcp-foundation/dmn01-rskcda-ss123-ui/compare/e09bf1426ecc58c15493f788561614aa3678c33e...75120ea91422d225eccc4d34ad36434c1164a1aa"
 }
