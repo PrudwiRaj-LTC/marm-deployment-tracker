@@ -22,7 +22,6 @@ def normalize_deployed_at(value):
         return datetime.fromtimestamp(int(value) / 1000, tz=timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     return value
  
- 
 new_current = {
     "version": payload["version"],
     "commitId": payload["commitId"],
@@ -30,28 +29,31 @@ new_current = {
     "deployedAt": normalize_deployed_at(payload["deployedAt"])
 }
  
+existing = None
 if tracker_file.exists():
- 
     with open(tracker_file) as f:
         existing = json.load(f)
  
-    previous = existing.get("current")
+previous = existing.get("previous") if existing else None
+current = existing.get("current") if existing else None
  
+if current and current.get("version") == new_current["version"]:
+    current = {**current, "deployedAt": new_current["deployedAt"]}
 else:
-    previous = None
+    previous = current
+    current = new_current
  
 compare_url = ""
- 
 if previous:
     compare_url = (
-        f"https://github.com/my-org/{service}"
-        f"/compare/{previous['commitId']}...{new_current['commitId']}"
+        f"https://github.com/lbg-gcp-foundation/{service}"
+        f"/compare/{previous['commitId']}...{current['commitId']}"
     )
  
 updated = {
     "service": service,
     "environment": environment,
-    "current": new_current,
+    "current": current,
     "previous": previous,
     "compareUrl": compare_url
 }
