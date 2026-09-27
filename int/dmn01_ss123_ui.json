@@ -1,0 +1,12 @@
+{
+  "service": "dmn01_ss123_ui",
+  "environment": "int",
+  "current": {
+    "version": "release_v1.356.0",
+    "commitId": "<+pipeline.variables.commit_id>",
+    "deploymentId": "lH23WqKAQ-mIKEYVOW_f5Q",
+    "deployedAt": "1790509817907"
+  },
+  "previous": null,
+  "compareUrl": ""
+}
