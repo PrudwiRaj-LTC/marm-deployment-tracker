@@ -3,15 +3,15 @@
   "environment": "int",
   "current": {
     "version": "release_v1.356.0",
+    "commitId": "<+pipeline.stages.evaluate_release.spec.execution.steps.Evaluate_Release_GitHub.outcome.output.httpResponseBody.target_commitish>",
+    "deploymentId": "irXWaUYzTrmG9jkX6um4wQ",
+    "deployedAt": "2026-09-27T13:33:02Z"
+  },
+  "previous": {
+    "version": "release_v1.356.0",
     "commitId": "<+pipeline.stages.evaluate_release>",
     "deploymentId": "C9BJutMOT_SkKmyQhnpXtw",
     "deployedAt": "2026-09-27T13:23:45Z"
   },
-  "previous": {
-    "version": "release_v1.356.0",
-    "commitId": "<+pipeline.stages.evaluate_release.spec.execution.steps.Evaluate_Release_GitHub.output.outputVariables>",
-    "deploymentId": "ojhsXGKESoi2vttbuWjRsw",
-    "deployedAt": "2026-09-27T13:22:38Z"
-  },
-  "compareUrl": "https://github.com/my-org/dmn01_ss123_ui/compare/<+pipeline.stages.evaluate_release.spec.execution.steps.Evaluate_Release_GitHub.output.outputVariables>...<+pipeline.stages.evaluate_release>"
+  "compareUrl": "https://github.com/my-org/dmn01_ss123_ui/compare/<+pipeline.stages.evaluate_release>...<+pipeline.stages.evaluate_release.spec.execution.steps.Evaluate_Release_GitHub.outcome.output.httpResponseBody.target_commitish>"
 }
