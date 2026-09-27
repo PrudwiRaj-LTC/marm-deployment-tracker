@@ -3,15 +3,15 @@
   "environment": "int",
   "current": {
     "version": "release_v1.356.0",
+    "commitId": "<+steps.evaluate_release.output.outputVariables.commit>",
+    "deploymentId": "LW62cdpdScuW3Rqt5L13fg",
+    "deployedAt": "2026-09-27T12:47:12Z"
+  },
+  "previous": {
+    "version": "release_v1.356.0",
     "commitId": "<+steps.evaluate_release.output.outputVariables.commit_id>",
     "deploymentId": "b7gYHh5SQRa0OowyzRkudw",
     "deployedAt": "2026-09-27T12:41:58Z"
   },
-  "previous": {
-    "version": "release_v1.356.0",
-    "commitId": "<+pipeline.variables.target_commitish>",
-    "deploymentId": "o-MtunnxTKabbZgGm8-xVA",
-    "deployedAt": "2026-09-27T12:36:49Z"
-  },
-  "compareUrl": "https://github.com/my-org/dmn01_ss123_ui/compare/<+pipeline.variables.target_commitish>...<+steps.evaluate_release.output.outputVariables.commit_id>"
+  "compareUrl": "https://github.com/my-org/dmn01_ss123_ui/compare/<+steps.evaluate_release.output.outputVariables.commit_id>...<+steps.evaluate_release.output.outputVariables.commit>"
 }
