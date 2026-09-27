@@ -4,14 +4,14 @@
   "current": {
     "version": "release_v1.356.0",
     "commitId": "<+pipeline.variables.commit_id>",
-    "deploymentId": "icVWe3dtRnS3wjY5mLtAHQ",
-    "deployedAt": "2026-09-27T11:59:20Z"
+    "deploymentId": "mlqya7eMTN2SHI-UBgv2Og",
+    "deployedAt": "2026-09-27T12:08:59Z"
   },
   "previous": {
     "version": "release_v1.356.0",
     "commitId": "<+pipeline.variables.commit_id>",
-    "deploymentId": "lH23WqKAQ-mIKEYVOW_f5Q",
-    "deployedAt": "1790509817907"
+    "deploymentId": "icVWe3dtRnS3wjY5mLtAHQ",
+    "deployedAt": "2026-09-27T11:59:20Z"
   },
   "compareUrl": "https://github.com/my-org/dmn01_ss123_ui/compare/<+pipeline.variables.commit_id>...<+pipeline.variables.commit_id>"
 }
